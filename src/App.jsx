@@ -1,22 +1,16 @@
-import React from 'react'
-import { Route, Routes } from 'react-router-dom'
-
-import PageAdel from './pages/PageAdel'
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import TerminalSnippetViewer from "./components/TerminalSnipeetViewer/TerminalSnippetViewer";
 
 function App() {
   return (
     <div>
+       
       <Routes>
-        <Route path='/' element={<h1>home page</h1>}/>
-      
-        <Route path='/adelpage' element={
-          <PageAdel/>
-      }/>
-    
+        <Route path="/" element={<h1>home page</h1>} />
       </Routes>
-  
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
