@@ -5,7 +5,7 @@ import TerminalSnippetViewer from "./components/TerminalSnipeetViewer/TerminalSn
 function App() {
   return (
     <div>
-       
+       <TerminalSnippetViewer  text={"hello world  const a=15 console.log(a)"}/>
       <Routes>
         <Route path="/" element={<h1>home page</h1>} />
       </Routes>
