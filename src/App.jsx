@@ -1,7 +1,5 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import TerminalSnippetViewer from "./components/TerminalSnipeetViewer/TerminalSnippetViewer";
-
 function App() {
   return (
     <div>
