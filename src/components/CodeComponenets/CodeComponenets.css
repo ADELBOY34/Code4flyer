@@ -1,90 +1,59 @@
-.terminal-style {
+.Code-box{
+  background-color: #091211;
   width: 100%;
-  max-width: 800px; /* limite sur grand écran */
-  height: auto;
-  background-color: #1e1e1e;
-  padding: 0;
+  max-width: 600px;
+  border-radius: 8px;
+  overflow: hidden;
   font-family: "Consolas", monospace;
-  border-top: 1px solid #333;
-  
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 }
-
-/* NAV */
-.terminal-style ul {
+.code-navbar{
+  background-color: #161b22;
+  border-bottom: 1px solid #2d333b;
+}
+.code-navbar ul{
   display: flex;
   align-items: center;
   list-style: none;
   margin: 0;
-  padding: 0 10px;
-  flex-wrap: wrap; /* IMPORTANT pour mobile */
-}
-
-/* Tabs */
-.terminal-style ul li {
-  padding: 10px 12px;
-  font-size: 13px;
-  color: #888;
+  padding: 8px 12px;
+  gap: 15px;
+  font-size: 12px;
+  color: #8b949e;
   cursor: pointer;
-  white-space: nowrap;
+  
 }
-
-/* Hover */
-.terminal-style ul li:hover {
-  color: #ccc;
+.code-navbar ul li:hover {
+color: white;
 }
-
+.circle{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+#circle1{
+  background-color: red;
+}
+#circle2{
+  background-color: green;
+}
+#circle3{
+  background-color: yellow;
+}
  
-
-/* Push buttons right */
-.terminal-style ul li:nth-last-child(2) {
+ .last{
   margin-left: auto;
-}
-
-/* Buttons */
-.terminal-style ul li:last-child,
-.terminal-style ul li:nth-last-child(2) {
   display: flex;
   align-items: center;
-  gap: 6px;
-  color: #ccc;
+ }
+/* ===== CODE BODY ===== */
+.code-body {
+  padding: 0px 15px !important;
+  font-size: 15px !important;
+  line-height: 1.5;
+  overflow-x: auto;
+  background-color: #1e252f !important;
+  overflow-x: auto;
+  overflow-y: auto;
 }
 
-/* Hover buttons */
-.terminal-style ul li:last-child:hover,
-.terminal-style ul li:nth-last-child(2):hover {
-  color: #58aab1;
-}
-
-/*  Responsive (tablette) */
-@media (max-width: 768px) {
-  .terminal-style ul {
-    gap: 5px;
-  }
-
-  .terminal-style ul li {
-    font-size: 12px;
-    padding: 8px 10px;
-  }
-}
-
-/*  Mobile */
-@media (max-width: 480px) {
-  .terminal-style ul {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  /* boutons passent en bas */
-  .terminal-style ul li:nth-last-child(2) {
-    margin-left: 0;
-    margin-top: 10px;
-  }
-
-  .terminal-style ul li:last-child {
-    margin-top: 5px;
-  }
-
-  .terminal-style ul li {
-    width: 100%;
-  }
-}

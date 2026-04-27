@@ -3,6 +3,8 @@ import { Copy, ClipboardCheck } from "lucide-react";
 import "./TerminalSnippetViewer.css";
 
 function TerminalSnippetViewer({ command }) {
+  /* Fonction qui copie le contenu du code dans le presse-papiers
+   et affiche un message "COPIED" pendant 3 secondes avant de revenir à l'état initial */
   const [copied, setCopied] = useState(false);
 
   const handleCopy = () => {
