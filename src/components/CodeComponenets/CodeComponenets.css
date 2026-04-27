@@ -1,0 +1,90 @@
+.terminal-style {
+  width: 100%;
+  max-width: 800px; /* limite sur grand écran */
+  height: auto;
+  background-color: #1e1e1e;
+  padding: 0;
+  font-family: "Consolas", monospace;
+  border-top: 1px solid #333;
+  
+}
+
+/* NAV */
+.terminal-style ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0 10px;
+  flex-wrap: wrap; /* IMPORTANT pour mobile */
+}
+
+/* Tabs */
+.terminal-style ul li {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #888;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+/* Hover */
+.terminal-style ul li:hover {
+  color: #ccc;
+}
+
+ 
+
+/* Push buttons right */
+.terminal-style ul li:nth-last-child(2) {
+  margin-left: auto;
+}
+
+/* Buttons */
+.terminal-style ul li:last-child,
+.terminal-style ul li:nth-last-child(2) {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #ccc;
+}
+
+/* Hover buttons */
+.terminal-style ul li:last-child:hover,
+.terminal-style ul li:nth-last-child(2):hover {
+  color: #58aab1;
+}
+
+/*  Responsive (tablette) */
+@media (max-width: 768px) {
+  .terminal-style ul {
+    gap: 5px;
+  }
+
+  .terminal-style ul li {
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+}
+
+/*  Mobile */
+@media (max-width: 480px) {
+  .terminal-style ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* boutons passent en bas */
+  .terminal-style ul li:nth-last-child(2) {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .terminal-style ul li:last-child {
+    margin-top: 5px;
+  }
+
+  .terminal-style ul li {
+    width: 100%;
+  }
+}
