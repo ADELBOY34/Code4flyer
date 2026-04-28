@@ -1,7 +1,11 @@
-import Herosection from "../components/herosection/Herosection";
-
-function Homepage() {
-  return <Herosection />;
-}
-
-export default Homepage;
+ import React from 'react'
+ 
+ function Homepage() {
+   return (
+     <>
+     </>
+   )
+ }
+ 
+ export default Homepage
+ 
