@@ -9,15 +9,9 @@ import Homepage from "./pages/Homepage";
 function App() {
   return (
     <div>
-      <IconeSlider/>
-      <br />
-       <TerminalSnippetViewer/>
-       <br />
-       <CodeComponenets/>
+       
       <Routes>
-        <Route path="/" element={<h1>home page</h1>} />
         <Route path="/" element={<Homepage />} />
-    
       </Routes>
     </div>
   );
