@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+.how-it-works {
+  --hero-text: #e6eeed;
+  --hero-bg: #091211;
+  --hero-primary: #8cdccd;
+  --hero-secondary: #198c77;
+  --hero-accent: #38f1cf;
+  padding: 72px 24px;
+  background: var(--hero-bg);
+  color: var(--hero-text);
+  font-family: "Inter", sans-serif;
+}
+
+.how-it-works__content {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(320px, 0.85fr);
+  align-items: center;
+  gap: 40px;
+  width: min(1180px, 100%);
+  margin: 0 auto;
+}
+
+.how-it-works__copy {
+  max-width: 640px;
+}
+
+.how-it-works__title {
+  margin: 0 0 16px;
+  font-size: clamp(2.6rem, 7vw, 5rem);
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+}
+
+.how-it-works__description {
+  margin: 0;
+  max-width: 58ch;
+  color: var(--hero-primary);
+  font-size: clamp(1rem, 1.6vw, 1.15rem);
+  line-height: 1.75;
+}
+
+.how-it-works__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 32px;
+}
+
+.how-it-works__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 18px;
+  border: 1px solid var(--hero-primary);
+  border-radius: 999px;
+  background: var(--hero-secondary);
+  color: var(--hero-text);
+  font-family: inherit;
+  font-size: 0.98rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition:
+    transform 180ms ease,
+    border-color 180ms ease,
+    background-color 180ms ease,
+    color 180ms ease;
+}
+
+.how-it-works__button:hover {
+  transform: translateY(-2px);
+  border-color: var(--hero-accent);
+  background: var(--hero-accent);
+  color: var(--hero-bg);
+}
+
+.how-it-works__button:focus-visible {
+  outline: 2px solid var(--hero-accent);
+  outline-offset: 3px;
+}
+
+.how-it-works__panel {
+  display: flex;
+  justify-content: center;
+}
+
+.how-it-works__window {
+  width: min(100%, 460px);
+  border: 1px solid var(--hero-primary);
+  border-radius: 28px;
+  background: var(--hero-secondary);
+}
+
+.how-it-works__window-bar {
+  display: flex;
+  gap: 10px;
+  padding: 20px 22px 0;
+}
+
+.how-it-works__window-bar span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.how-it-works__window-bar span:first-child {
+  background: var(--hero-accent);
+}
+
+.how-it-works__window-bar span:nth-child(2) {
+  background: var(--hero-primary);
+}
+
+.how-it-works__window-bar span:nth-child(3) {
+  background: var(--hero-text);
+}
+
+.how-it-works__window-body {
+  padding: 24px 22px 22px;
+}
+
+.how-it-works__eyebrow {
+  margin: 0 0 14px;
+  color: var(--hero-accent);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.how-it-works__window-body h2 {
+  margin: 0;
+  color: var(--hero-text);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  line-height: 1.15;
+}
+
+.how-it-works__metrics {
+  display: grid;
+  gap: 14px;
+  margin: 28px 0;
+}
+
+.how-it-works__metric {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 16px;
+  border: 1px solid var(--hero-primary);
+  border-radius: 18px;
+  background: var(--hero-bg);
+}
+
+.how-it-works__metric strong {
+  color: var(--hero-accent);
+  font-size: 1rem;
+}
+
+.how-it-works__metric span {
+  color: var(--hero-primary);
+  font-size: 0.96rem;
+}
+
+.how-it-works__snippet {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 16px 18px;
+  border-radius: 18px;
+  background: var(--hero-bg);
+  color: var(--hero-text);
+  font-family: "Consolas", "Courier New", monospace;
+  font-size: 0.92rem;
+}
+
+@media (max-width: 900px) {
+  .how-it-works {
+    padding: 64px 20px;
+  }
+
+  .how-it-works__content {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .how-it-works__copy {
+    max-width: none;
+  }
+
+  .how-it-works__panel {
+    justify-content: stretch;
+  }
+
+  .how-it-works__window {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .how-it-works {
+    padding: 56px 16px;
+  }
+
+  .how-it-works__actions {
+    gap: 10px;
+  }
+
+  .how-it-works__button {
+    flex: 1 1 calc(50% - 10px);
+    min-width: 120px;
+  }
+
+  .how-it-works__metric {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .how-it-works__snippet {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
