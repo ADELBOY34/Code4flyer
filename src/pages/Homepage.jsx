@@ -1,11 +1,10 @@
- import React from 'react'
- 
- function Homepage() {
-   return (
-     <>
-     </>
-   )
- }
- 
- export default Homepage
- 
+import About from "../components/about/About";
+import Herosection from "../components/HeroSection/Herosection";
+
+function Homepage() {
+  return (<div><Herosection />
+  <About />
+  </div>)
+}
+
+export default Homepage;
