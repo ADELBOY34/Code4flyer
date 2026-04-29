@@ -1,17 +1,20 @@
-import React from "react";
-import { Route, Routes } from "react-router-dom";
-import Homepage from "./pages/Homepage";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Navbar from './components/navbar/Navbar';
+import Footer from './components/footer/Footer';
+import HomePage from './pages/HomePage';
 
 function App() {
   return (
-    <div>
-       
+    <BrowserRouter>
+      <Navbar />
       <Routes>
-        <Route path="/" element={<Homepage />} />
-    
+        <Route path="/" element={<HomePage />} />
       </Routes>
-    </div>
+      <Footer />
+    </BrowserRouter>
   );
 }
+
+export default App;
 
 export default App;
