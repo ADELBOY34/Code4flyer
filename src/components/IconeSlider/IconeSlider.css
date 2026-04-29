@@ -1,0 +1,86 @@
+.slider {
+  overflow: hidden;
+  width: 100%;
+  background-color: #091211;
+  position: relative;
+  padding: 20px 0;
+}
+
+/* effet fade sur les bords 🔥 */
+.slider::before,
+.slider::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 80px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.slider::before {
+  left: 0;
+  background: linear-gradient(to right, #091211, transparent);
+}
+
+.slider::after {
+  right: 0;
+  background: linear-gradient(to left, #091211, transparent);
+}
+
+.slide-track {
+  display: flex;
+  width: max-content;
+  animation: scroll 12s linear infinite;
+  gap: 40px; /* remplace margin → plus clean */
+}
+
+/* hover pause (super UX) */
+.slide-track:hover {
+  animation-play-state: paused;
+}
+
+.slide-track span {
+  font-size: 60px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* effet hover 🔥 */
+.slide-track span:hover {
+  transform: scale(1.2);
+  filter: brightness(1.2);
+}
+
+ 
+#js {
+  color: yellow;
+}
+#html {
+  color: blue;
+}
+#css {
+  color: orange;
+}
+#react {
+  color: rgb(0, 248, 252);
+}
+#mongo {
+  color: rgb(50, 209, 50);
+}
+#git {
+  color: rgb(207, 136, 4);
+}
+#npm {
+  color: white;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
