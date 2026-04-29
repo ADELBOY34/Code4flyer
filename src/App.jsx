@@ -1,7 +1,8 @@
-import {Routes, Route } from 'react-router-dom';
-import HomePage from './pages/HomePage';
-import Navbar from './components/navbar/navbar';
-import Footer from './components/footer/footer';
+import { Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import Howitworks from "./pages/Howitworks";
+import Navbar from "./components/navbar/navbar";
+import Footer from "./components/footer/footer";
 
 function App() {
   return (
@@ -9,9 +10,10 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/howitworks" element={<Howitworks />} />
       </Routes>
       <Footer />
-      </div>
+    </div>
   );
 }
 
