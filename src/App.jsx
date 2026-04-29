@@ -9,11 +9,13 @@ import IconeSlider from "./components/IconeSlider/IconeSlider";
 import TerminalSnippetViewer from "./components/TerminalSnipeetViewer/TerminalSnippetViewer";
 import CodeComponenets from "./components/CodeComponenets/CodeComponenets";
 import Homepage from "./pages/Homepage";
+import NoteComponenets from './components/noteComponenets/NoteComponenets';
 
 function App() {
   return (
     <div>
       <Navbar />
+      
       <Routes>
         <Route path="/" element={<HomePage />} />
       </Routes>
