@@ -37,13 +37,13 @@ function Navbar() {
       {isOpen && <div className="navbar-overlay" onClick={closeMenu} />}
 
       <ul className={`navbar-links${isOpen ? ' open' : ''}`}>
-        <li><Link to="/"         className={isActive('/')}         onClick={closeMenu}>Accueil</Link></li>
-        <li><Link to="/about"    className={isActive('/about')}    onClick={closeMenu}>À propos</Link></li>
+        <li><Link to="/"         className={isActive('/')}         onClick={closeMenu}>Home</Link></li>
+        <li><Link to="/about"    className={isActive('/about')}    onClick={closeMenu}>Workflow</Link></li>
         <li><Link to="/services" className={isActive('/services')} onClick={closeMenu}>Services</Link></li>
         <li><Link to="/contact"  className={isActive('/contact')}  onClick={closeMenu}>Contact</Link></li>
         <li>
           <Link to="/contact" className="navbar-cta" onClick={closeMenu}>
-            Commencer →
+            Begin →
           </Link>
         </li>
       </ul>
