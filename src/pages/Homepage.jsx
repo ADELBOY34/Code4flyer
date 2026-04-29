@@ -1,7 +1,10 @@
+import About from "../components/about/About";
 import Herosection from "../components/HeroSection/Herosection";
 
 function Homepage() {
-  return <Herosection />;
+  return (<div><Herosection />
+  <About />
+  </div>)
 }
 
 export default Homepage;
