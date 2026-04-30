@@ -1,16 +1,15 @@
-import React, { useState } from 'react'
+import React from 'react'
 import "./NoteComponenets.css"
 import { CiStickyNote } from "react-icons/ci";
 
-function NoteComponenets({note}) {
-  
+function NoteComponenets({ note }) {
   return (
-     <>
-     <div className='note-box'>
-      <h3 className='NoteTitle'><CiStickyNote  /> Note</h3>
-      {note}
-     </div>
-     </>
+    <div className='note-box'>
+      <h3 className='NoteTitle'>
+        <CiStickyNote /> Note
+      </h3>
+      <p>{note}</p>
+    </div>
   )
 }
 

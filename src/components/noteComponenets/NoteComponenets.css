@@ -1,26 +1,19 @@
 .note-box {
-  background: rgba(230, 238, 237, 0.8); /* #e6eeed avec transparence */
-  backdrop-filter: blur(10px);
-
+  background: rgba(230, 238, 237, 0.85);
   color: #091211;
-
   padding: 18px 22px;
   border-radius: 14px;
-
-  max-width: 320px;
-  width: fit-content;
-
+  max-width: 40%;
+  height: auto;
   border: 1px solid rgba(140, 220, 205, 0.3);
-
-  /* glow léger */
   box-shadow: 
     0 8px 20px rgba(9, 18, 17, 0.15),
     0 0 10px rgba(140, 220, 205, 0.2);
-
   transition: all 0.25s ease;
+  display: inline-block;
 }
 
-/* hover smooth */
+/* hover */
 .note-box:hover {
   transform: translateY(-3px);
   box-shadow: 
@@ -28,7 +21,7 @@
     0 0 15px rgba(25, 140, 119, 0.4);
 }
 
-/* petite ligne décorative en haut */
+/* ligne en haut */
 .note-box::before {
   content: "";
   display: block;
@@ -38,8 +31,13 @@
   border-radius: 10px;
   margin-bottom: 10px;
 }
-.NoteTitle{
+
+.NoteTitle {
   color: #188c76;
   font-weight: bold;
   font-family: Georgia, 'Times New Roman', Times, serif;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
