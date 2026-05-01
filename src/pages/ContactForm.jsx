@@ -139,100 +139,73 @@ const [message, setMessage] = useState("");
         <hr style={{ border: "none", borderTop: "1px solid #c2dbd8", marginBottom: "2rem" }} />
 
 {/* Form */}
-        <h2 style={{ color: "#198c77", fontWeight: 500, textAlign: "left" }}>Send a message</h2>
 
-        <form
-        onSubmit={handleSubmit}
-        style={{ display: "flex", flexDirection: "column", gap: "1rem", maxWidth: 500, textAlign: "left" }}
-        >
-        <label style={{ color: "#091211" }}> Contact person 
-            <select
-            value={selectedPerson}
-            onChange={(e) => setSelectedPerson(e.target.value)}
-            style={{
-                display: "block",
-                width: "100%",
-                marginTop: 4,
-                padding: "9px 12px",
-                borderRadius: 8,
-                border: "1px solid #c2dbd8",
-                backgroundColor: "#f0f8f7",
-                color: "#091211",
-                fontSize: 13,
-                }}
-            >
+<h2 style={{ color: "#198c77", fontWeight: 500, textAlign: "left" }}>Send a message</h2>
+
+{/* Map*/}
+<div style={{ display: "flex", gap: "6rem", justifyContent: "center", alignItems: "flex-start", flexWrap: "wrap" }}>
+
+    <form
+    onSubmit={handleSubmit}
+    style={{ display: "flex", flexDirection: "column", gap: "1rem", width: 500, textAlign: "left" }}
+    >
+
+    <label style={{ color: "#091211" }}> Contact person
+    <select
+        value={selectedPerson}
+        onChange={(e) => setSelectedPerson(e.target.value)}
+        style={{ display: "block", width: "100%", marginTop: 4, padding: "9px 12px", borderRadius: 8, border: "1px solid #c2dbd8", backgroundColor: "#f0f8f7", color: "#091211", fontSize: 13 }}
+    >
         <option value="">-- Select a person --</option>
-            {team.map((member) => (
-            <option key={member.id} value={member.id}>
-                {member.name} — {member.role}
-            </option>
+        {team.map((member) => (
+        <option key={member.id} value={member.id}>
+            {member.name} — {member.role}
+        </option>
+        ))}
+    </select>
+    </label>
 
-            ))}
-
-        </select>
-        </label>
-        <label style={{ color: "#091211" }}> Subject
-            <select
-            value={selectedSubject}
-            onChange={(e) => setSelectedSubject(e.target.value)}
-            style={{
-                display: "block",
-                width: "100%",
-                marginTop: 4,
-                padding: "9px 12px",
-                borderRadius: 8,
-                border: "1px solid #c2dbd8",
-                backgroundColor: "#f0f8f7",
-                color: "#091211",
-                fontSize: 13,
-            }}
-            >
+    <label style={{ color: "#091211" }}> Subject
+    <select
+        value={selectedSubject}
+        onChange={(e) => setSelectedSubject(e.target.value)}
+        style={{ display: "block", width: "100%", marginTop: 4, padding: "9px 12px", borderRadius: 8, border: "1px solid #c2dbd8", backgroundColor: "#f0f8f7", color: "#091211", fontSize: 13 }}
+    >
         <option value="">-- Select a subject --</option>
-            {subjects.map((s) => (
-                <option key={s} value={s}>
-                {s}
-                </option>
-            ))}
-            </select>
-        </label>
+        {subjects.map((s) => (
+        <option key={s} value={s}>{s}</option>
+        ))}
+    </select>
+    </label>
 
-        <label style={{ color: "#091211" }}> Message (optional)
-            <textarea
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-            rows={4}
-            placeholder="Your message..."
-            style={{
-                display: "block",
-                width: "100%",
-                marginTop: 4,
-                padding: "9px 12px",
-                borderRadius: 8,
-                border: "1px solid #c2dbd8",
-                backgroundColor: "#f0f8f7",
-                color: "#091211",
-                fontSize: 13,
-                boxSizing: "border-box",
-            }}
-            />
-        </label>
+    <label style={{ color: "#091211" }}> Message (optional)
+    <textarea
+        value={message}
+        onChange={(e) => setMessage(e.target.value)}
+        rows={4}
+        placeholder="Your message..."
+        style={{ display: "block", width: "100%", marginTop: 4, padding: "9px 12px", borderRadius: 8, border: "1px solid #c2dbd8", backgroundColor: "#f0f8f7", color: "#091211", fontSize: 13, boxSizing: "border-box" }}
+    />
+    </label>
 
-        <button
-            type="submit"
-            style={{
-            backgroundColor: "#198c77",
-            color: "#e6eeed",
-            border: "none",
-            borderRadius: 8,
-            padding: "10px 24px",
-            fontSize: 14,
-            fontWeight: 500,
-            cursor: "pointer",
-            alignSelf: "flex-start",
-            }}
-        > Send email →
-        </button>
-        </form>
+    <button
+        type="submit"
+        style={{ backgroundColor: "#198c77", color: "#e6eeed", border: "none", borderRadius: 8, padding: "10px 24px", fontSize: 14, fontWeight: 500, cursor: "pointer", alignSelf: "flex-start" }}
+    > Send us an email →
+    </button>
+
+</form>
+
+{/* Map */}
+    <iframe
+    title="GoMyCode Hydra"
+    src="https://www.google.com/maps?q=GoMyCode+Hydra+Alger&output=embed"
+    width="300"
+    height="400"
+    style={{ borderRadius: 10, border: "1px solid #8CDCCD"}}
+    loading="lazy"
+    />
+            </div>
         </div>
     </div>
     );
