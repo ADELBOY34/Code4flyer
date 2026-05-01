@@ -8,9 +8,8 @@ import TerminalSnippetViewer from "./components/TerminalSnipeetViewer/TerminalSn
 import CodeComponenets from "./components/CodeComponenets/CodeComponenets";
 import NoteComponenets from './components/noteComponenets/NoteComponenets';
 import Howitworks from "./pages/Howitworks";
-import Navbar from "./components/navbar/navbar";
-import Footer from "./components/footer/footer";
-import Contact from "./pages/Contact";
+import Contact from './pages/ContactForm';
+
 
 function App() {
   return (
