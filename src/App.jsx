@@ -8,6 +8,7 @@ import TerminalSnippetViewer from "./components/TerminalSnipeetViewer/TerminalSn
 import CodeComponenets from "./components/CodeComponenets/CodeComponenets";
 import NoteComponenets from './components/noteComponenets/NoteComponenets';
 import Howitworks from "./pages/Howitworks";
+import TypeScriptPage from './pages/typeScriptPage/TypeScriptPage';
  
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/howitworks" element={<Howitworks />} />
+        <Route path="/typescript" element={<TypeScriptPage/>}/>
       </Routes>
       <Footer />
     </div>
