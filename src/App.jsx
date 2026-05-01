@@ -8,6 +8,8 @@ import TerminalSnippetViewer from "./components/TerminalSnipeetViewer/TerminalSn
 import CodeComponenets from "./components/CodeComponenets/CodeComponenets";
 import NoteComponenets from './components/noteComponenets/NoteComponenets';
 import Howitworks from "./pages/Howitworks";
+import Contact from './pages/ContactForm';
+
 import TypeScriptPage from './pages/typeScriptPage/TypeScriptPage';
  
 
@@ -18,6 +20,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/howitworks" element={<Howitworks />} />
+        <Route path="contact" element={<Contact />} />
         <Route path="/typescript" element={<TypeScriptPage/>}/>
       </Routes>
       <Footer />
