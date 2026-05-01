@@ -8,7 +8,8 @@ import TerminalSnippetViewer from "./components/TerminalSnipeetViewer/TerminalSn
 import CodeComponenets from "./components/CodeComponenets/CodeComponenets";
 import NoteComponenets from './components/noteComponenets/NoteComponenets';
 import Howitworks from "./pages/Howitworks";
- 
+import Contact from './pages/ContactForm';
+
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/howitworks" element={<Howitworks />} />
+        <Route path="contact" element={<Contact />} />
       </Routes>
       <Footer />
     </div>
