@@ -1,10 +1,19 @@
 import React from 'react'
-import SideBar from '../../components/sideBar/sideBar'
+import SideBar from '../../components/SideBar/SideBar'
+import "./TypeScriptPage.css"
+import { Outlet } from 'react-router-dom'
 
 function TypeScriptPage() {
   return (
     <>
-     <SideBar/>
+    <div  className="typescript-layout">
+      <SideBar/>
+      <Outlet />
+    </div>
+     
+     
+    
+   
     </>
   )
 }

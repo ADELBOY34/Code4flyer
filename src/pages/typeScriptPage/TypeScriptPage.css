@@ -1,1 +1,172 @@
  
+
+/* LAYOUT GLOBAL */
+.typescript-layout {
+  display: flex;
+  background-color: #091211;
+  color: #e6eeed;
+  min-height: 100vh;
+}
+
+ 
+
+/* CONTENU */
+.container {
+  flex: 1;
+  padding: 40px 80px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* INTRO */
+.intro {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+
+  border-left: 4px solid #38f1cf;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+
+  background: rgba(56, 241, 207, 0.05);
+}
+
+/* ICONE */
+.congrat-icone {
+  font-size: 20px;
+  color: #38f1cf;
+
+  padding: 10px;
+  border-radius: 50%;
+  background: rgba(56, 241, 207, 0.1);
+
+  box-shadow: 0 0 10px rgba(56, 241, 207, 0.4);
+  transition: all 0.3s ease;
+}
+
+.congrat-icone:hover {
+  transform: scale(1.15) rotate(8deg);
+  box-shadow: 0 0 20px rgba(56, 241, 207, 0.7);
+}
+
+/* CARDS */
+.card {
+  background-color: #091211;
+  border: 1px solid rgba(140, 220, 205, 0.15);
+  border-radius: 16px;
+  padding: 25px;
+  margin-bottom: 25px;
+
+  transition: 0.3s ease;
+  backdrop-filter: blur(6px);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: #38f1cf;
+  box-shadow: 0 10px 25px rgba(56, 241, 207, 0.15);
+}
+
+/* TITRES */
+.card h2 {
+  color: #38f1cf;
+  margin-bottom: 10px;
+  font-size: 22px;
+  position: relative;
+}
+
+.card h2::after {
+  content: "";
+  width: 40px;
+  height: 3px;
+  background: #198c77;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  border-radius: 5px;
+}
+
+/* TEXTE */
+.card p {
+  line-height: 1.7;
+  color: #cfd8d7;
+}
+
+.type-section {
+  margin-bottom: 30px;
+}
+
+.type-section h3 {
+  color: #38f1cf;
+  margin-bottom: 5px;
+}
+
+.type-section p {
+  font-size: 14px;
+  color: #cfd8d7;
+  margin-bottom: 10px;
+}
+/* ========================= */
+/* 📱 RESPONSIVE */
+/* ========================= */
+
+/* TABLET */
+@media (max-width: 1024px) {
+  .container {
+    padding: 30px 40px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  .typescript-layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    min-width: 100%;
+    border-right: none;
+    border-bottom: 1px solid rgba(140, 220, 205, 0.1);
+  }
+
+  .container {
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .intro {
+    font-size: 14px;
+    padding: 15px;
+  }
+
+  .card h2 {
+    font-size: 18px;
+  }
+
+  .card p {
+    font-size: 14px;
+  }
+
+  .congrat-icone {
+    font-size: 18px;
+    padding: 8px;
+  }
+}
+
+/* PETIT MOBILE */
+@media (max-width: 480px) {
+  .container {
+    padding: 15px;
+  }
+
+  .card {
+    padding: 15px;
+    border-radius: 12px;
+  }
+
+  .intro {
+    border-left: 3px solid #38f1cf;
+  }
+}
